@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 import Prodectlist from "./components/Prodect.list";
 import Cart from "./components/Cart";
 import Detail from "./components/Detail";
-
+import Default from "./components/Default";
 
 export default class App extends Component {
   render() {
@@ -14,10 +14,10 @@ export default class App extends Component {
      <React.Fragment>
      <NavBar/>
      <Switch>
-    
+    <Route exact path="/" component={Prodectlist}/>
     <Route path="/cart" component={Cart}/>
     <Route path="/detail" component={Detail}/>
-    <Route path="/" component={Prodectlist}/>
+    <Route component={Default}/>
 
     
      </Switch>
